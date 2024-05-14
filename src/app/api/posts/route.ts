@@ -3,7 +3,7 @@ import prisma from '@/lib/prisma'
 
 const app = new Elysia({prefix: '/api/posts'})
 
-app.get('/', async (req) => {
+app.get('/', async () => {
   const posts = await prisma.postagem.findMany({
     orderBy: {
       created: 'desc'

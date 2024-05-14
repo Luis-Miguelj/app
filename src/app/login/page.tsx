@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export default async function Login(){
-  async function login(data){
+  async function login(data: FormData){
     'use server'
     console.log('ok')
   }
