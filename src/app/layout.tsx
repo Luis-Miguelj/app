@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-export const PORT = process.env.PORT || 3000;
+export const PORT = 3000;
 
 export const metadata: Metadata = {
   title: "Create Next App",
