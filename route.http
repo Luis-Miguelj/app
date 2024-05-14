@@ -1,3 +1,7 @@
+GET https://app-three-ashen.vercel.app/api/user
+
+###
+
 GET http://localhost:3000/api/user/
 
 ###
