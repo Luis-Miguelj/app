@@ -2,3 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+#login-page{
+  background-image: url('../../public/tech-prisma.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
