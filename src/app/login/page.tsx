@@ -1,9 +1,22 @@
 import Link from "next/link";
 
 export default async function Login(){
+  
   async function login(data: FormData){
     'use server'
-    console.log('ok')
+
+    const email = data.get('email')
+    const password = data.get('password')
+
+    console.log(JSON.stringify({email: email, password: password}))
+
+    await fetch('https://app-three-ashen.vercel.app/api/login',{
+      method: 'POST',
+      body: JSON.stringify({email: email, password: password})
+    })
+    console.log('Logado com sucesso!')
+    // const api = await response.json()
+    // console.log(api.message)
   }
   return(
     <div className="w-full mx-auto h-screen flex justify-between items-center">

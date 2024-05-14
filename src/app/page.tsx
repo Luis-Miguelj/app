@@ -9,7 +9,7 @@ export default async function Home() {
   const response = await fetch(`https://app-three-ashen.vercel.app/api/user/`)
   const data = await response.json()
 
-  console.log(data)
+  // console.log(data)
   return (
     <div>
       {

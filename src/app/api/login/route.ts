@@ -2,7 +2,7 @@ import {Elysia, t} from 'elysia'
 import prisma from '@/lib/prisma'
 import cors from '@elysiajs/cors'
 
-const app = new Elysia({ prefix: '/api/user' }).use(cors({origin: '*', methods: ['GET']}))
+const app = new Elysia({ prefix: '/api/user' }).use(cors({origin: '*', methods: ['POST']}))
 
 app.post('/', async (req)=>{
   const { email, password } = req.body
