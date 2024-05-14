@@ -1,4 +1,4 @@
-GET http://localhost:3000/api/user/663c03a6ebd5fca6f44e6658
+GET https://app-three-ashen.vercel.app/api/user/663c03a6ebd5fca6f44e6658
 ###
 POST http://localhost:3000/api/user
 Content-Type: application/json

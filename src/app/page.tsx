@@ -6,9 +6,10 @@ interface UserProps{
   token: [{id: string, userId: string}]
 }
 export default async function Home() {
-  // const response = await fetch(`app-three-ashen.vercel.app/api/user`)
-  // const data = await response.json()
+  const response = await fetch(`https://app-three-ashen.vercel.app/api/user/663c03a6ebd5fca6f44e6658`)
+  const data = await response.json()
 
+  console.log(data)
   return (
     <div>
       {/* {

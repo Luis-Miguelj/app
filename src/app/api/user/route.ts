@@ -7,9 +7,9 @@ const app = new Elysia({ prefix: '/api/user' }).compile().use(cors({origin: '*',
 app.get('/', async () => {
   const user = await prisma.user.findMany()
   if (!user) {
-    return Response.json({ message: 'No user found' })
+    return Response.json({ message: 'Usuarios não encontrados' })
   }
-  return Response.json({ message: 'Hello, World!', user }, { status: 200 })
+  return Response.json({ usuarios: user }, { status: 200 })
 })
 
 app.post('/', async (req)=>{
