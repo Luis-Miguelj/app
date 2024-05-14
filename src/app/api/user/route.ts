@@ -1,7 +1,7 @@
 import prisma from '@/lib/prisma'
 import { Elysia, t } from 'elysia'
 
-const app = new Elysia({ prefix: '/api/user' })
+const app = new Elysia({ prefix: '/api/user' }).compile()
 
 app.get('/', async () => {
   const user = await prisma.user.findMany()

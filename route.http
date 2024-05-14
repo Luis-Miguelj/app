@@ -1,3 +1,5 @@
+GET http://localhost:3000/api/user/663c03a6ebd5fca6f44e6658
+###
 POST http://localhost:3000/api/user
 Content-Type: application/json
 
@@ -17,3 +19,17 @@ Content-Type: application/json
   "title": "Fazendo um PUT na postagem como teste da nova api",
   "description": "Mudei a postagem como um teste para a nova api"
 }
+
+###
+POST http://localhost:3000/api/posts/663c03a6ebd5fca6f44e6658
+Content-Type: application/json
+
+{
+  "title": "Postagem de teste",
+  "description": "Postagem de teste para a nova api"
+}
+
+
+###
+
+DELETE http://localhost:3000/api/logout/663c1db2c42b99c922295a73

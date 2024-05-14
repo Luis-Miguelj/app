@@ -1,7 +1,7 @@
 import {Elysia, t} from 'elysia'
 import prisma from '@/lib/prisma'
 
-const app = new Elysia({prefix: '/api/posts'})
+const app = new Elysia({prefix: '/api/posts'}).compile()
 
 app.get('/', async () => {
   const posts = await prisma.postagem.findMany({
