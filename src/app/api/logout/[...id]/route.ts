@@ -1,7 +1,8 @@
 import { Elysia,t } from 'elysia'
 import prisma from '@/lib/prisma'
+import cors from '@elysiajs/cors'
 
-const app = new Elysia({prefix: '/api/logout'}).compile()
+const app = new Elysia({prefix: '/api/logout'}).compile().use(cors({origin: '*', methods: ['DELETE']}))
 
 app.delete('/:id', async ({params})=>{
   if(!params.id){

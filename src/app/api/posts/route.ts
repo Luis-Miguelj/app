@@ -1,7 +1,8 @@
 import {Elysia, t} from 'elysia'
 import prisma from '@/lib/prisma'
+import cors from '@elysiajs/cors'
 
-const app = new Elysia({prefix: '/api/posts'}).compile()
+const app = new Elysia({prefix: '/api/posts'}).compile().use(cors({origin: '*', methods: ['GET']}))
 
 app.get('/', async () => {
   const posts = await prisma.postagem.findMany({

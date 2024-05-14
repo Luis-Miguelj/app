@@ -1,7 +1,8 @@
 import {Elysia, t} from 'elysia'
 import prisma from '@/lib/prisma'
+import cors from '@elysiajs/cors'
 
-const app = new Elysia({prefix: '/api/posts'}).compile()
+const app = new Elysia({prefix: '/api/posts'}).compile().use(cors({origin: '*', methods: ['PUT', 'POST']}))
 
 app.put('/:id', async ({body, params})=>{
   const {title, description } = body
