@@ -12,7 +12,7 @@ app.get('/', async (req) => {
   if (!posts) {
     return Response.json({message: 'Posts não encontrados!'}, {status: 404})
   }
-  return Response.json({ posts }, {status: 200})
+  return Response.json({ postagens: posts }, {status: 200})
 })
 
 
